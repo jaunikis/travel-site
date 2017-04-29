@@ -1,0 +1,24 @@
+{
+  "name": "travel-site",
+  "version": "1.0.0",
+  "description": "mano",
+  "main": "index.html",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "normalize.css": "^6.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaunikis/travel-site.git"
+  },
+  "author": "marius",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaunikis/travel-site/issues"
+  },
+  "homepage": "https://github.com/jaunikis/travel-site#readme"
+}
