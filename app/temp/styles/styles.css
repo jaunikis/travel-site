@@ -1063,7 +1063,8 @@ a {
 
 .site-header {
 	padding: 10px;
-	position: absolute;
+	position: relative;
+	margin-bottom:-186px;
 	z-index: 2;
 	width: 100%;
 	transition: background-color .6s ease-out;
@@ -1078,6 +1079,7 @@ a {
 
   .site-header {
     background-color: rgba(47,85,114, .3);
+    margin-bottom: -62px;
   }
 }
 
@@ -1115,12 +1117,51 @@ a {
 
 .site-header__menu-icon {
   width:20px;
-  height:20px;
-  background-color: #FFF;
+  height:19px;
   position:absolute;
   z-index: 10;
   top:10px;
   right:10px;
+}
+
+.site-header__menu-icon::before {
+  content: "";
+  position:absolute;
+  top:0;
+  left:0;
+  width:20px;
+  height: 3px;
+  background-color:#FFF;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  transition: -webkit-transform .6s ease-out;
+  transition: transform .6s ease-out;
+  transition: transform .6s ease-out, -webkit-transform .6s ease-out;
+}
+
+.site-header__menu-icon__middle{
+  position:absolute;
+  top:8px;
+  left:0;
+  width:20px;
+  height: 3px;
+  background-color:#FFF;
+  transition: all .6s ease-out;
+}
+
+.site-header__menu-icon::after {
+  content: "";
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:20px;
+  height: 3px;
+  background-color:#FFF;
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  transition: -webkit-transform .6s ease-out;
+  transition: transform .6s ease-out;
+  transition: transform .6s ease-out, -webkit-transform .6s ease-out;
 }
 
 @media(min-width: 800px) {
@@ -1128,6 +1169,22 @@ a {
   .site-header__menu-icon {
     display: none;
   }
+}
+
+.site-header__menu-icon--close-x::before {
+  -webkit-transform: rotate(45deg) scaleX(1.25);
+          transform: rotate(45deg) scaleX(1.25);
+}
+
+.site-header__menu-icon--close-x .site-header__menu-icon__middle {
+  opacity: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.site-header__menu-icon--close-x::after {
+  -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+          transform: rotate(-45deg) scaleX(1.25) translateY(1px);
 }
 
 .site-header__menu-content {
